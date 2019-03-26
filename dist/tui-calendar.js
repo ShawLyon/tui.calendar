@@ -19328,7 +19328,9 @@ ScheduleCreationPopup.prototype._toggleIsPrivate = function(target) {
 ScheduleCreationPopup.prototype._onClickSaveSchedule = function(target) {
     var className = config.classname('popup-save');
     var cssPrefix = config.cssPrefix;
-    var title, isPrivate, location, isAllDay, startDate, endDate, state;
+    var title,  startDate, endDate;
+    // 去掉的功能给个默认值，否则会报错
+    var isPrivate = false, location = '', isAllDay = true, state = ''
     var start, end, calendarId;
 
     if (!domutil.hasClass(target, className) && !domutil.closest(target, '.' + className)) {
@@ -19349,10 +19351,12 @@ ScheduleCreationPopup.prototype._onClickSaveSchedule = function(target) {
         return true;
     }
 
-    isPrivate = !domutil.hasClass(domutil.get(cssPrefix + 'schedule-private'), config.classname('public'));
-    location = domutil.get(cssPrefix + 'schedule-location');
-    state = domutil.get(cssPrefix + 'schedule-state');
-    isAllDay = !!domutil.get(cssPrefix + 'schedule-allday').checked;
+    // 去除 【全天，地址，状态，私有】
+
+    // isPrivate = !domutil.hasClass(domutil.get(cssPrefix + 'schedule-private'), config.classname('public'));
+    // location = domutil.get(cssPrefix + 'schedule-location');
+    // state = domutil.get(cssPrefix + 'schedule-state');
+    // isAllDay = !!domutil.get(cssPrefix + 'schedule-allday').checked;
 
     if (isAllDay) {
         startDate.setHours(0);
@@ -19648,7 +19652,7 @@ ScheduleCreationPopup.prototype._createDatepicker = function(start, end) {
     DatePicker.localeTexts['Chinese character'] = {
         titles: {
             DD: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
-            D: ['日', '月', '火', '水', '木', '金', '土'],
+            D: ['日', '一', '二', '三', '四', '五', '六'],
             MMM: ['1月', '2月', '3月', '4月', '5月', '6月',
                 '7月', '8月', '9月', '10月', '11月', '12月'],
             MMMM: ['一月', '二月', '三月', '四月', '五月', '六月',
