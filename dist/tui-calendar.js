@@ -1,7 +1,7 @@
 /*!
- * TOAST UI Calendar
- * @version 1.11.0 | Fri Mar 08 2019
- * @author NHNEnt FE Development Lab <dl_javascript@nhnent.com>
+ * cdo TOAST UI Calendar
+ * @version 1.11.0 | 03/26 2019
+ * @author lyon
  * @license MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {
