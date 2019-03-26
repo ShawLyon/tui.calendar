@@ -9098,7 +9098,7 @@ Calendar.prototype.setCalendarColor = function(calendarId, option, silent) {
     }
 
     ownColor = calColor[calendarId] = util.extend({
-        color: '#000',
+        color: '#fff',
         bgColor: '#a1b56c',
         borderColor: '#a1b56c'
     }, option);
@@ -20687,7 +20687,7 @@ module.exports = (Handlebars['default'] || Handlebars).template({"1":function(co
     + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.model : depth0)) != null ? stack1.color : stack1), depth0))
     + "\n";
 },"15":function(container,depth0,helpers,partials,data) {
-    return "                                color:#333;\n                            ";
+    return "                                color:#666;\n                            ";
 },"17":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=container.escapeExpression, alias4=container.lambda, alias5="function";
 
@@ -21097,7 +21097,7 @@ module.exports = (Handlebars['default'] || Handlebars).template({"1":function(co
     + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.model : depth0)) != null ? stack1.color : stack1), depth0))
     + "\n";
 },"31":function(container,depth0,helpers,partials,data) {
-    return "                                color:#333;\n";
+    return "                                color:#666;\n";
 },"33":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : (container.nullContext || {}), alias4=helpers.helperMissing, alias5="function";
 
